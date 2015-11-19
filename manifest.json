@@ -2,8 +2,9 @@
   "manifest_version": 2,
 
   "name": "Tab Mover (Move tabs with keyboard shortcuts)",
+  "short_name": "Tab Mover",
   "description": "Move your tabs around with keyboard shortcuts",
-  "version": "1.0",
+  "version": "1.1",
   "author": "Dennis Paagman",
 
   "icons": {

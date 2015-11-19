@@ -10,8 +10,22 @@ chrome.commands.onCommand.addListener(function(command) {
 });
 
 function moveCurrentTab(direction) {
-  chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+  var count;
+
+  chrome.tabs.query({ currentWindow: true }, function(tabs) {
+    count = tabs.length;
+  });
+
+  chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
     tab = tabs[0];
-    chrome.tabs.move(tab.id, { index: tab.index + direction });
+
+    if (tab.index === (count-1) && direction === 1) {
+      // last tab so move it to the front
+      new_index = 0;
+    } else {
+      new_index = tab.index + direction;
+    }
+
+    chrome.tabs.move(tab.id, { index: new_index });
   });
 }
