@@ -4,7 +4,7 @@
   "name": "Tab Mover (Move tabs with keyboard shortcuts)",
   "short_name": "Tab Mover",
   "description": "Move your tabs around with keyboard shortcuts",
-  "version": "1.1",
+  "version": "1.2",
   "author": "Dennis Paagman",
 
   "icons": {
@@ -13,13 +13,12 @@
   },
 
   "background": {
-    "scripts": ["tabMover.js"],
-    "persistent": false
+    "scripts": ["tabMover.js"]
   },
 
   "permissions": [
     "activeTab"
-    ],
+  ],
 
   "commands": {
     "move-tab-left": {
